@@ -1,0 +1,37 @@
+.container {
+    background: var(--primary-color);
+    color: var(--primary-contrast-color);
+    padding: 16px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.logo {
+    padding: 4px 12px;
+    border-radius: 16px;
+    color: var(--primary-contrast-color);
+}
+
+.links {
+    margin: 0 20px;
+    display: inline-block;
+}
+
+.button {
+    background: none;
+    color: var(--primary-contrast-color);
+    border: 0;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    margin-right: 16px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.button:hover, .button.active {
+    border-bottom: 2px solid var(--primary-contrast-color);
+}
+

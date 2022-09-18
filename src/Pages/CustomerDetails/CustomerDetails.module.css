@@ -1,0 +1,31 @@
+.lastUpdated {
+    padding: 8px 16px;
+    color: var(--gray-color);
+}
+
+.attrsContainer {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.attrTitle {
+    margin-top: 0;
+}
+
+.attrsTopBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.attrsGrid {
+    display: grid;
+    gap: 4px;
+    grid-template-columns: 200px 1fr;
+}
+
+.attrsGrid :nth-child(odd) {
+    color: var(--gray-color);
+}

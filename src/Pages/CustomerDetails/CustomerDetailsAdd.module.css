@@ -1,0 +1,6 @@
+.addGrid {
+    margin-top: 32px;
+    display: grid;
+    column-gap: 4px;
+    grid-template-columns: 200px 1fr 100px;
+}

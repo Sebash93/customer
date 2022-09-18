@@ -1,0 +1,28 @@
+.button {
+    background: var(--secondary-color);
+    color: var(--secondary-contrast-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.button:hover, .button:active,  .button:focus{
+    background: var(--secondary-color-dark);
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button.linkType {
+    background: transparent;
+    color: var(--primary-contrast-color);
+    text-decoration: underline;
+    padding: 4px;
+}
+
+.button.dangerColor {
+    color: var(--danger-color);
+}

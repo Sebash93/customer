@@ -1,0 +1,9 @@
+.input {
+    border: 1px solid var(--ligth-gray-color);
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.input:focus, .input:hover {
+    border: 1px solid var(--gray-color)
+}

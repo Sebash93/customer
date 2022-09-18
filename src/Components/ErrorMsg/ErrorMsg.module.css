@@ -1,0 +1,8 @@
+.errorMsg {
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    margin-bottom: 8px;
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+}

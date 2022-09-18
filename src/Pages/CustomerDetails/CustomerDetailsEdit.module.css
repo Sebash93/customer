@@ -1,0 +1,24 @@
+.editGrid {
+    display: grid;
+    column-gap: 4px;
+    row-gap: 8px;
+    align-items: center;
+    grid-template-columns: 200px 1fr 100px;
+}
+
+.editGridKey {
+    color: var(--gray-color);
+}
+
+.removeWrapper {
+    text-align: center;
+}
+
+.bottomBar {
+    margin-top: 32px;
+    text-align: right;
+}
+
+.bottomBar > * {
+   margin-left: 16px;
+}

@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# Customer.io Take Home Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Customer.io Take Home Test, by Sebastian Hernandez.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+1. Install all the dependencies by excecuting `npm install`
+2. Run the project in a development by excecuting `npm start`
+3. Run the tests by excecuting `npm test`
 
-### `npm start`
+## Implementation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The test was bootstraped using Create React App for easier setup.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Tools and dependencies**
 
-### `npm test`
+- Typescript: This allow us to have an organized and structured way to keep track of models, interfaces and values across the app, it also checks for some requirementes for react components and checks for possible bugs on sintax and declarations.
+- CSS Modules: This method allows us to use easy naming on classes preventing collisions and having scoped classNames.
+- Date-fns: This lightweight library is used to format some dates from number formats to human readable dates.
+- Axios: This library is used for HTTP Calls management providing an easy to use interface.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Architecture**
+The app was structured with the goal to be easy to read and maintain thus there are some divisions on the folder structure allowing us to separate different concepts and responsabilities:
 
-### `npm run build`
+- Componentes: React Components shared in either by other components or Pages.
+- Pages: React Components that group smaller components to create a functional large piece of the application.
+- assets: Folder to store assets used mainly for the styling of the app and the components.
+- data: Folder containing all the logic to connect with the API, including API Calls, adapters to format the incomming data and types to be used along with Typescript.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Known Issues
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Create React App Development mode refetching: When we run the app using npm start, the server will watch changes made to the files and sometimes it will reload the page preserving current state of the component, thus causing the component to refetch new data and append this data to the current one. (This happens on customers list)
+- Not Mobile UI: The ui is not mobile friendly
+- There is no way to go back from edit version to details page without "saving" changes. Save is mandatory to go back
+- Not validation have been done for "Save Changes" and "Discard Changes" Buttons. You can click both of them at any time even if there are no changes to saves or changes to discard.
+- Error message will stay until you click "Save Changes" again. Even if you have fixed the errors, the message will stay until you try to make a call to the API again.
+- Many edit fields might cause performance issue. Because of the way React manages the state and the implementation done, if theres a customer with a lot of attributes the edition of those might be slow.
+- Preexisitng attributes validation, you can "add" an attribute that already exists this will cause a bug, showing duplicate fields and having a discrepancy between the UI and whats sent to the API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future Work
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- State management: This is needed to prevent unnecesary calls to the API, since the API returns the details for all the customers when getting the list, we could store this data locally and access it later on the customer details page.
+- Adaptative UI: Some changes can be done to the UI for it be Adaptative.
+- UI for loading states: We could implement a better UI for loading states, including loading in buttons, placeholders for incomming information and disabling some functions while loading.
+- Much better Typescript Typing: Because of the time constrain there are many "any" types in the application, this might be changed by the actual types and interfaces to have a more stable and bug free app.

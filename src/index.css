@@ -1,13 +1,40 @@
+@font-face {
+  font-family: 'Lato';
+  src: url('./assets/lato-bold-webfont.woff2') format('woff2'),
+       url('./assets/lato-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('./assets/lato-regular-webfont.woff2') format('woff2'),
+       url('./assets/lato-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+:root {
+  font-size: 16px;
+  --primary-color: #F7F7FF;
+  --primary-contrast-color: #070600;
+
+  --secondary-color: #17B890;
+  --secondary-color-dark:#0B5B47;
+  --secondary-contrast-color: #ffffff;
+
+  --gray-color: #888888;
+  --ligth-gray-color: #B0B0B0;
+  --danger-color: #EA526F;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Lato', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

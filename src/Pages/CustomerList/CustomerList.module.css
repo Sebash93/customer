@@ -1,0 +1,31 @@
+.table {
+    width: 100%;
+    text-align: left;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.table th {
+    font-weight: bold;
+    padding: 8px;
+}
+
+.table td {
+    padding: 8px;
+}
+
+.table tr:nth-child(even) {
+    background: var(--primary-color);
+}
+
+.loadMoreBar {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    color: var(--gray-color);
+}
+
+
+
+
